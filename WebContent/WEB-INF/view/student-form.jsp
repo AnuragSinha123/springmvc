@@ -22,15 +22,27 @@
   
   <form:select path = "country">
   
-   <form:option value="India" label="India"/>
+  <form:options items="${student.countryOptions}" />
+  
+  <!--  <form:option value="India" label="India"/>
    <form:option value="USA" label="USA"/>
    <form:option value="France" label="France"/>
    <form:option value="Russia" label="Russia"/>
-   
+   --> 
   </form:select>
   
   <br><br>
   
+  Language :
+  
+    Java<form:radiobutton path="favouriteLanguage" value ="java"/>
+    C<form:radiobutton path="favouriteLanguage" value ="C"/>
+    Python<form:radiobutton path="favouriteLanguage" value ="Python"/>
+    C#<form:radiobutton path="favouriteLanguage" value ="C#"/>
+    
+    <br><br>
+    
+    
    <input type ="submit" value = "Submit"/>
    
      

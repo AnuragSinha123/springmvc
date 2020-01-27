@@ -1,14 +1,26 @@
 package com.sopra.springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 
-	public String firstName;
-	public String lastName;
+	private String firstName;
+	private String lastName;
 	private String Country;
+	
+	private LinkedHashMap<String , String> CountryOptions;
+	
+	private String favouriteLanguage;
 	
 	public Student() {
 		
-		
+		CountryOptions = new LinkedHashMap<>();
+		CountryOptions.put("IN", "India");
+		CountryOptions.put("BR", "Brazil");
+		CountryOptions.put("US", "USA");
+		CountryOptions.put("FR", "France");
+		CountryOptions.put("DE", "Germany");
+
 	}
 	public String getFirstName() {
 		return firstName;
@@ -27,6 +39,15 @@ public class Student {
 	}
 	public void setCountry(String country) {
 		Country = country;
+	}
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return CountryOptions;
+	}
+	public String getFavouriteLanguage() {
+		return favouriteLanguage;
+	}
+	public void setFavouriteLanguage(String favouriteLanguage) {
+		this.favouriteLanguage = favouriteLanguage;
 	}
 	
 	
